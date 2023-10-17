@@ -175,6 +175,7 @@ const getAppBlog = () => {
 
 const getUI = () => {
   const _default = {
+    showAnnouncement: true,
     theme: 'system',
     classes: {},
     tokens: {},
