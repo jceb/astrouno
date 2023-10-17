@@ -2,7 +2,7 @@
 import { defineConfig, presetIcons, presetTypography, presetUno } from "unocss";
 import presetWind from "@unocss/preset-wind";
 import transformerDirectives from "@unocss/transformer-directives";
-import { presetDaisy } from "unocss-preset-daisy";
+// import { presetDaisy } from "unocss-preset-daisy";
 
 const uno = presetUno();
 
