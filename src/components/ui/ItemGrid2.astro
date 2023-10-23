@@ -42,6 +42,7 @@ const {
           title,
           description,
           icon,
+          iconRef,
           callToAction,
           classes: itemClasses = {},
         }) => (
@@ -52,7 +53,20 @@ const {
               itemClasses?.panel
             )}
           >
-            {(icon || defaultIcon) && (
+            {(icon || defaultIcon) && iconRef && (
+              <a class={iconRef.className} {...iconRef.target ? { target: iconRef.target, rel: 'noopener noreferrer' } : {}} {...iconRef}>
+                <Icon
+                  name={icon || defaultIcon}
+                  class={twMerge(
+                    "mb-2 w-10 h-10",
+                    defaultIconClass,
+                    itemClasses?.icon
+                  )}
+                />
+              </a>
+            )}
+            {(icon || defaultIcon) && !iconRef && (
+
               <Icon
                 name={icon || defaultIcon}
                 class={twMerge(
