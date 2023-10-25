@@ -3,24 +3,6 @@ html {
   @apply font-sans;
 }
 
-/* @layer utilities { */
-.bg-page {
-  background-color: var(--aw-color-bg-page);
-}
-.bg-dark {
-  background-color: var(--aw-color-bg-page-dark);
-}
-.bg-light {
-  background-color: var(--aw-color-bg-page);
-}
-.text-page {
-  color: var(--aw-color-text-page);
-}
-.text-muted {
-  color: var(--aw-color-text-muted);
-}
-/* } */
-
 /* @layer components { */
 
 .btn {
@@ -30,8 +12,7 @@ html {
   @apply bg-primary border-primary hover:bg-accent hover:border-accent dark:bg-primary dark:border-primary dark:hover:border-accent dark:hover:bg-accent font-semibold text-white hover:text-white dark:text-white;
 }
 .btn-secondary {
-  @apply text-muted;
-  background-color: var(--aw-color-bg-page);
+  @apply bg-tranparent text-muted;
 }
 .btn-tertiary {
   @apply text-muted border-none shadow-none hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
@@ -47,6 +28,9 @@ html {
 #header.scroll.dark > div:first-child {
   @apply bg-page border-b border-gray-500/20 md:bg-[#030621e6];
   box-shadow: none;
+}
+#header .btn-secondary {
+  @apply lt-md:bg-page;
 }
 
 /* #header.scroll > div:last-child { */

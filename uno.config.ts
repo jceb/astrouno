@@ -7,6 +7,13 @@ import transformerDirectives from "@unocss/transformer-directives";
 const uno = presetUno();
 
 export default defineConfig({
+  rules: [
+    ["bg-page", { "background-color": "var(--aw-color-bg-page);" }],
+    ["bg-dark", { "background-color": "var(--aw-color-bg-page-dark);" }],
+    ["bg-light", { "background-color": "var(--aw-color-bg-page);" }],
+    ["text-page", { "color": "var(--aw-color-text-page);" }],
+    ["text-muted", { "color": "var(--aw-color-text-muted);" }],
+  ],
   theme: {
     colors: {
       primary: "var(--aw-color-primary)",
