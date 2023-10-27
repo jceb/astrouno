@@ -39,6 +39,7 @@ export default defineConfig({
     mdx(),
     icon({
       include: {
+        'flag': ['*'],
         tabler: ['*'],
         'flat-color-icons': [
           'template',

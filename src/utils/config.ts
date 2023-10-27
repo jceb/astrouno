@@ -118,6 +118,8 @@ const getI18N = () => {
   const _default = {
     language: 'en',
     textDirection: 'ltr',
+    showLanguagePicker: true,
+    showDefaultLanguage: false,
   };
 
   const value = merge({}, _default, config?.i18n ?? {});

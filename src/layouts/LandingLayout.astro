@@ -2,7 +2,9 @@
 import PageLayout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 
-import { headerData } from '~/navigation';
+import { getNavigationData } from '~/navigation';
+const { headerData, footerData } = getNavigationData(Astro.url);
+
 import type { MetaData } from '~/types';
 
 export interface Props {

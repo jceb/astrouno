@@ -28,6 +28,7 @@
   "devDependencies": {
     "@astrojs/mdx": "^1.1.0",
     "@astrojs/partytown": "^2.0.0",
+    "@iconify-json/flag": "^1.1.39",
     "@iconify-json/flat-color-icons": "^1.1.7",
     "@iconify-json/tabler": "^1.1.91",
     "@types/lodash.merge": "^4.6.7",

@@ -4,6 +4,7 @@ import Logo from "~/components/Logo.astro";
 import ToggleTheme from "~/components/common/ToggleTheme.astro";
 import ToggleMenu from "~/components/common/ToggleMenu.astro";
 import Button from "~/components/ui/Button.astro"
+import LanguagePicker from "~/components/ui/LanguagePicker.astro";
 
 import { getHomePermalink } from "~/utils/permalinks";
 import { trimSlash, getAsset } from "~/utils/permalinks";
@@ -29,6 +30,7 @@ export interface Props {
   isSticky?: boolean;
   isDark?: boolean;
   isFullWidth?: boolean;
+  showLanguagePicker?: boolean;
   showToggleTheme?: boolean;
   showRssFeed?: boolean;
   position?: string;
@@ -41,6 +43,7 @@ const {
   isSticky = false,
   isDark = false,
   isFullWidth = false,
+  showLanguagePicker = true,
   showToggleTheme = false,
   showRssFeed = false,
   position = "center",
@@ -117,6 +120,13 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
               )}
             </li>
           ))
+        }
+        {
+          showLanguagePicker && (
+            <li class="dropdown">
+              <LanguagePicker />
+            </li>
+          )
         }
       </ul>
     </nav>

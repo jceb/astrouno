@@ -1,8 +1,6 @@
 ---
 import '~/assets/styles/uno.css';
 
-import { I18N } from "~/utils/config";
-
 import CommonMeta from '~/components/common/CommonMeta.astro';
 import Favicons from '~/components/Favicons.astro';
 import CustomStyles from "~/components/CustomStyles.astro"
@@ -11,6 +9,7 @@ import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification  from "~/components/common/SiteVerification.astro"
 import Analytics  from "~/components/common/Analytics.astro"
 import BasicScripts from '~/components/common/BasicScripts.astro';
+import { getLangFromUrl } from '~/i18n/utils';
 
 import type { MetaData as MetaDataType } from '~/types';
 
@@ -19,7 +18,7 @@ export interface Props {
 }
 
 const { metadata = {} } = Astro.props;
-const { language, textDirection } = I18N;
+const { language, textDirection } = getLangFromUrl(Astro.url);
 ---
 
 <!DOCTYPE html>

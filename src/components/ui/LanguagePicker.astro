@@ -1,0 +1,34 @@
+---
+import { languages, flags } from "~/i18n/ui";
+import { translatePath, getLangFromUrl } from "~/i18n/utils";
+import { Icon } from "astro-icon/components";
+import Image from "~/components/common/Image.astro";
+const { language: currentLanguage } = getLangFromUrl(Astro.url);
+---
+
+{
+  (
+    <>
+      <button class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center">
+        <Icon name={`flag:${flags[currentLanguage] || currentLanguage}-4x3`} class="w-4.5 h-4.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 md:inline" />&nbsp;
+        <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+      </button>
+      <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+        {Object.entries(languages).map(([language, label]) => (
+          <li>
+            <a
+              class:list={[
+                'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap inline',
+                { 'aw-link-active': language === currentLanguage },
+              ]}
+              href={translatePath('/', language)}
+            >
+              {label}&nbsp;
+              <Icon name={`flag:${flags[language] || language}-4x3`} class="w-4.5 h-4.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 md:inline" />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}
