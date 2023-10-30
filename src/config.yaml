@@ -72,7 +72,7 @@ ui:
   header:
     isSticky: true
     showLanguagePicker: true
-    showToggleTheme: false
+    showToggleTheme: true
     showRssFeed: true
 
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
