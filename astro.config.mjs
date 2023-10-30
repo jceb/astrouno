@@ -39,7 +39,7 @@ export default defineConfig({
     mdx(),
     icon({
       include: {
-        'flag': ['*'],
+        flag: ['*'],
         tabler: ['*'],
         'flat-color-icons': [
           'template',

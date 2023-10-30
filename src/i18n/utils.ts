@@ -1,14 +1,10 @@
 // Documentation: https://docs.astro.build/en/recipes/i18n/
 
-import { I18N } from "~/utils/config";
-import {
-  languages,
-  textDirections,
-  ui,
-} from "./ui";
+import { I18N } from '~/utils/config';
+import { languages, textDirections, ui } from './ui';
 
-export function getLangFromUrl(url: URL) : string {
-  const [, lang] = url.pathname.split("/");
+export function getLangFromUrl(url: URL): string {
+  const [, lang] = url.pathname.split('/');
   if (lang in languages) return { language: lang as keyof typeof ui };
   return {
     language: I18N.language,
@@ -17,8 +13,8 @@ export function getLangFromUrl(url: URL) : string {
 }
 
 export function useTranslations(lang: keyof typeof ui) {
-  return function t(key: keyof typeof ui[I18N.language]) {
-    return ui[lang] && ui[lang][key] || ui[I18N.language][key];
+  return function t(key: keyof (typeof ui)[I18N.language]) {
+    return (ui[lang] && ui[lang][key]) || ui[I18N.language][key];
   };
 }
 

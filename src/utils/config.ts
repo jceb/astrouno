@@ -181,7 +181,7 @@ const getUI = () => {
       isSticky: true,
       showLanguagePicker: true,
       showToggleTheme: true,
-      showRssFeed: true
+      showRssFeed: true,
     },
     theme: 'system',
     classes: {},

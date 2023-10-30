@@ -1,7 +1,7 @@
 import slugify from 'limax';
 
 import { SITE, APP_BLOG } from '~/utils/config';
-import { I18N } from "~/utils/config";
+import { I18N } from '~/utils/config';
 import { translatePath } from '~/i18n/utils';
 
 import { trim } from '~/utils/utils';
@@ -41,8 +41,8 @@ export const getCanonical = (path = ''): string | URL => {
 };
 
 export const getTranslatedPermalink = (slug = '', language = I18N.language, type = 'page'): string => {
-  return translatePath(getPermalink(slug, type), language)
-}
+  return translatePath(getPermalink(slug, type), language);
+};
 
 /** */
 export const getPermalink = (slug = '', type = 'page'): string => {
@@ -77,7 +77,8 @@ export const getTranslatedHomePermalink = (language = I18N.language): string => 
 
 /** */
 export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
-export const getTranslatedBlogPermalink = (language = I18N.language): string => getTranslatedPermalink(BLOG_BASE, language);
+export const getTranslatedBlogPermalink = (language = I18N.language): string =>
+  getTranslatedPermalink(BLOG_BASE, language);
 
 /** */
 export const getAsset = (path: string): string =>

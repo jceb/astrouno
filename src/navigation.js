@@ -67,7 +67,7 @@ export const getNavigationData = (url) => {
           links: [
             {
               text: t('nav.landing.lead'),
-              href: getTranslatedPermalink('/landing/lead-generation', language,),
+              href: getTranslatedPermalink('/landing/lead-generation', language),
             },
             {
               text: t('nav.landing.long'),
@@ -75,7 +75,7 @@ export const getNavigationData = (url) => {
             },
             {
               text: t('nav.landing.click'),
-              href:  getTranslatedPermalink('/landing/click-through', language,),
+              href: getTranslatedPermalink('/landing/click-through', language),
             },
             {
               text: t('nav.landing.product'),
@@ -83,11 +83,11 @@ export const getNavigationData = (url) => {
             },
             {
               text: t('nav.landing.coming'),
-              href:  getTranslatedPermalink('/landing/pre-launch', language,),
+              href: getTranslatedPermalink('/landing/pre-launch', language),
             },
             {
               text: t('nav.landing.subscription'),
-              href:  getTranslatedPermalink('/landing/subscription', language,),
+              href: getTranslatedPermalink('/landing/subscription', language),
             },
           ],
         },
@@ -100,15 +100,15 @@ export const getNavigationData = (url) => {
             },
             {
               text: t('nav.blog.article'),
-              href:  getTranslatedPermalink( 'get-started-website-with-astro-tailwind-css', language, 'post'),
+              href: getTranslatedPermalink('get-started-website-with-astro-tailwind-css', language, 'post'),
             },
             {
               text: t('nav.blog.article.mdx'),
-              href:  getTranslatedPermalink('markdown-elements-demo-post', language, 'post'),
+              href: getTranslatedPermalink('markdown-elements-demo-post', language, 'post'),
             },
             {
               text: t('nav.blog.category'),
-              href:  getTranslatedPermalink('tutorials', language, 'category'),
+              href: getTranslatedPermalink('tutorials', language, 'category'),
             },
             {
               text: t('nav.blog.tag'),
@@ -121,11 +121,13 @@ export const getNavigationData = (url) => {
           href: '#',
         },
       ],
-      actions: [{
-        text: t('nav.download'),
-        href: 'https://github.com/jceb/astrouno',
-        target: '_blank',
-      }],
+      actions: [
+        {
+          text: t('nav.download'),
+          href: 'https://github.com/jceb/astrouno',
+          target: '_blank',
+        },
+      ],
     },
     footerData: {
       links: [
