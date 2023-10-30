@@ -1,7 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SITE } from '~/utils/config';
-import { getHomePermalink } from '~/utils/permalinks';
+import { getTranslatedHomePermalink } from '~/utils/permalinks';
+import { getLangFromUrl } from '~/i18n/utils';
 
 interface Link {
   text?: string;
@@ -23,6 +24,7 @@ export interface Props {
   theme?: string;
 }
 
+const { language } = getLangFromUrl(Astro.url);
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
@@ -32,7 +34,7 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
+          <a class="inline-block font-bold text-xl" href={getTranslatedHomePermalink(language)}>{SITE?.name}</a>
         </div>
         <div class="text-sm text-muted">
           {

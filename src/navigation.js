@@ -1,5 +1,5 @@
-import { getAsset, getBlogPermalink, getPermalink } from './utils/permalinks';
-import { getLangFromUrl, translatePath, useTranslations } from './i18n/utils';
+import { getAsset, getTranslatedBlogPermalink, getTranslatedPermalink } from '~/utils/permalinks';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 
 export const getNavigationData = (url) => {
   const { language } = getLangFromUrl(url);
@@ -13,19 +13,19 @@ export const getNavigationData = (url) => {
           links: [
             {
               text: t('nav.homes.saas'),
-              href: translatePath(getPermalink('/homes/saas'), language),
+              href: getTranslatedPermalink('/homes/saas', language),
             },
             {
               text: t('nav.homes.startup'),
-              href: translatePath(getPermalink('/homes/startup'), language),
+              href: getTranslatedPermalink('/homes/startup', language),
             },
             {
               text: t('nav.homes.mobile'),
-              href: translatePath(getPermalink('/homes/mobile-app'), language),
+              href: getTranslatedPermalink('/homes/mobile-app', language),
             },
             {
               text: t('nav.homes.personal'),
-              href: translatePath(getPermalink('/homes/personal'), language),
+              href: getTranslatedPermalink('/homes/personal', language),
             },
           ],
         },
@@ -34,31 +34,31 @@ export const getNavigationData = (url) => {
           links: [
             {
               text: t('nav.product.features'),
-              href: translatePath(getPermalink('/#features'), language),
+              href: getTranslatedPermalink('/#features', language),
             },
             {
               text: t('nav.services'),
-              href: translatePath(getPermalink('/services'), language),
+              href: getTranslatedPermalink('/services', language),
             },
             {
               text: t('nav.product.pricing'),
-              href: translatePath(getPermalink('/pricing'), language),
+              href: getTranslatedPermalink('/pricing', language),
             },
             {
               text: t('nav.company.about'),
-              href: translatePath(getPermalink('/about'), language),
+              href: getTranslatedPermalink('/about', language),
             },
             {
               text: t('nav.contact'),
-              href: translatePath(getPermalink('/contact'), language),
+              href: getTranslatedPermalink('/contact', language),
             },
             {
               text: t('nav.terms'),
-              href: translatePath(getPermalink('/terms'), language),
+              href: getTranslatedPermalink('/terms', language),
             },
             {
               text: t('nav.privacy'),
-              href: translatePath(getPermalink('/privacy'), language),
+              href: getTranslatedPermalink('/privacy', language),
             },
           ],
         },
@@ -67,39 +67,27 @@ export const getNavigationData = (url) => {
           links: [
             {
               text: t('nav.landing.lead'),
-              href: translatePath(
-                getPermalink('/landing/lead-generation'),
-                language,
-              ),
+              href: getTranslatedPermalink('/landing/lead-generation', language,),
             },
             {
               text: t('nav.landing.long'),
-              href: translatePath(getPermalink('/landing/sales'), language),
+              href: getTranslatedPermalink('/landing/sales', language),
             },
             {
               text: t('nav.landing.click'),
-              href: translatePath(
-                getPermalink('/landing/click-through'),
-                language,
-              ),
+              href:  getTranslatedPermalink('/landing/click-through', language,),
             },
             {
               text: t('nav.landing.product'),
-              href: translatePath(getPermalink('/landing/product'), language),
+              href: getTranslatedPermalink('/landing/product', language),
             },
             {
               text: t('nav.landing.coming'),
-              href: translatePath(
-                getPermalink('/landing/pre-launch'),
-                language,
-              ),
+              href:  getTranslatedPermalink('/landing/pre-launch', language,),
             },
             {
               text: t('nav.landing.subscription'),
-              href: translatePath(
-                getPermalink('/landing/subscription'),
-                language,
-              ),
+              href:  getTranslatedPermalink('/landing/subscription', language,),
             },
           ],
         },
@@ -108,35 +96,23 @@ export const getNavigationData = (url) => {
           links: [
             {
               text: t('nav.blog.list'),
-              href: getBlogPermalink(),
+              href: getTranslatedBlogPermalink(language),
             },
             {
               text: t('nav.blog.article'),
-              href: translatePath(
-                getPermalink(
-                  'get-started-website-with-astro-tailwind-css',
-                  'post',
-                ),
-                language,
-              ),
+              href:  getTranslatedPermalink( 'get-started-website-with-astro-tailwind-css', language, 'post'),
             },
             {
               text: t('nav.blog.article.mdx'),
-              href: translatePath(
-                getPermalink('markdown-elements-demo-post', 'post'),
-                language,
-              ),
+              href:  getTranslatedPermalink('markdown-elements-demo-post', language, 'post'),
             },
             {
               text: t('nav.blog.category'),
-              href: translatePath(
-                getPermalink('tutorials', 'category'),
-                language,
-              ),
+              href:  getTranslatedPermalink('tutorials', language, 'category'),
             },
             {
               text: t('nav.blog.tag'),
-              href: translatePath(getPermalink('astro', 'tag'), language),
+              href: getTranslatedPermalink('astro', language, 'tag'),
             },
           ],
         },
@@ -201,11 +177,11 @@ export const getNavigationData = (url) => {
       secondaryLinks: [
         {
           text: t('nav.terms'),
-          href: translatePath(getPermalink('/terms'), language),
+          href: getTranslatedPermalink('/terms', language),
         },
         {
           text: t('nav.privacy'),
-          href: translatePath(getPermalink('/privacy'), language),
+          href: getTranslatedPermalink('/privacy', language),
         },
       ],
       socialLinks: [

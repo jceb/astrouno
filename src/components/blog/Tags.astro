@@ -1,16 +1,17 @@
 ---
-import { getPermalink } from '~/utils/permalinks';
+import { getTranslatedPermalink } from '~/utils/permalinks';
 
-import {  APP_BLOG } from '~/utils/config';
+import { APP_BLOG } from '~/utils/config';
 import type { Post } from '~/types';
 
 export interface Props {
   tags: Post['tags'];
-  class?: string;  
+  class?: string;
   title?: string | undefined;
   isCategory?: boolean;
 }
 
+const { language } = getLangFromUrl(Astro.url);
 const { tags, class: className = 'text-sm', title = undefined, isCategory = false } = Astro.props;
 ---
 
@@ -27,7 +28,7 @@ const { tags, class: className = 'text-sm', title = undefined, isCategory = fals
               tag
             ) : (
               <a
-                href={getPermalink(tag, (isCategory ? 'category' : 'tag'))}
+                href={getTranslatedPermalink(tag, language, (isCategory ? 'category' : 'tag'))}
                 class="text-muted dark:text-slate-300 hover:text-primary dark:hover:text-gray-200"
               >
                 {tag}

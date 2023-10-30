@@ -3,8 +3,9 @@ import { APP_BLOG } from "~/utils/config";
 
 import Grid from "~/components/blog/Grid.astro";
 
-import { getBlogPermalink } from "~/utils/permalinks";
+import { getTranslatedPermalink } from "~/utils/permalinks";
 import { findPostsByIds } from "~/utils/blog";
+import { getLangFromUrl, getTextDirection, useTranslations } from '~/i18n/utils';
 import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import type { Widget } from "~/types";
 
@@ -16,10 +17,12 @@ export interface Props extends Widget {
   postIds: string[];
 }
 
+const { language } = getLangFromUrl(Astro.url);
+const t = useTranslations(language);
 const {
   title = await Astro.slots.render("title"),
-  linkText = "View all posts",
-  linkUrl = getBlogPermalink(),
+  linkText = t("blog.posts.all"),
+  linkUrl = getTranslatedPermalink('', language),
   information = await Astro.slots.render("information"),
   postIds = [],
 

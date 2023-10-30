@@ -5,8 +5,9 @@ import Image from '~/components/common/Image.astro';
 import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 
-import { getPermalink } from '~/utils/permalinks';
+import { getTranslatedPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
+import { getLangFromUrl, useTranslations } from '~/i18n/utils';
 
 import type { Post } from '~/types';
 
@@ -15,6 +16,8 @@ export interface Props {
   url: string | URL;
 }
 
+const { language } = getLangFromUrl(Astro.url);
+const t = useTranslations(language);
 const { post, url } = Astro.props;
 const { Content } = post;
 ---
@@ -31,7 +34,7 @@ const { Content } = post;
               <>
                 {' '}
                 ·{' '}
-                <a class="capitalize hover:underline inline-block" href={getPermalink(post.category, 'category')}>
+                <a class="capitalize hover:underline inline-block" href={getTranslatedPermalink(post.category, language, 'category', language)}>
                   {post.category.replaceAll('-', ' ')}
                 </a>
               </>

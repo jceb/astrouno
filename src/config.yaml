@@ -28,10 +28,10 @@ metadata:
     cardType: summary_large_image
 
 i18n:
+  # Configure languages and translations in ./i18n/ui.ts
   language: en
   textDirection: ltr
-  showLanguagePicker: true
-  showDefaultLanguage: false
+  showDefaultLanguageInURL: false
 
 apps:
   blog:
@@ -69,6 +69,11 @@ analytics:
 
 ui:
   showAnnouncement: true
+  header:
+    isSticky: true
+    showLanguagePicker: true
+    showToggleTheme: false
+    showRssFeed: true
 
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 

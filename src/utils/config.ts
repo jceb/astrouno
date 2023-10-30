@@ -118,8 +118,7 @@ const getI18N = () => {
   const _default = {
     language: 'en',
     textDirection: 'ltr',
-    showLanguagePicker: true,
-    showDefaultLanguage: false,
+    showDefaultLanguageInURL: false,
   };
 
   const value = merge({}, _default, config?.i18n ?? {});
@@ -178,6 +177,12 @@ const getAppBlog = () => {
 const getUI = () => {
   const _default = {
     showAnnouncement: true,
+    header: {
+      isSticky: true,
+      showLanguagePicker: true,
+      showToggleTheme: true,
+      showRssFeed: true
+    },
     theme: 'system',
     classes: {},
     tokens: {},
