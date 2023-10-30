@@ -123,7 +123,7 @@ export const getNavigationData = (url) => {
       ],
       actions: [{
         text: t('nav.download'),
-        href: 'https://github.com/onwidget/astrowind',
+        href: 'https://github.com/jceb/astrouno',
         target: '_blank',
       }],
     },

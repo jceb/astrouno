@@ -1,7 +1,7 @@
 {
-  "name": "@onwidget/astrowind",
-  "description": "AstroWind: A free template using Astro 3.0 and Tailwind CSS. Astro starter theme.",
-  "version": "1.0.0-beta.6",
+  "name": "@jceb/astrouno",
+  "description": "AstroUno: A free template using Astro 3.0 and UnoCSS. Astro starter theme.",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {

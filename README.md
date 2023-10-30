@@ -1,14 +1,9 @@
-# 🚀 AstroWind
+# 🚀 AstroUno
 
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
-     alt="AstroWind Lighthouse Score" width="100" height="358">
-
-🌟 _Most *starred* & *forked* Astro theme in 2022_. 🌟
-
-**AstroWind** is a free and open-source template to make your website using **[Astro 3.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/)**. Ready to start a new project and designed taking into account web best practices.
+**AstroUno** is a free and open-source template to make your website using **[Astro 3.0](https://astro.build/) + [UnoCSS](https://unocss.dev/)**. Ready to start a new project and designed taking into account web best practices.
 
 - ✅ **Production-ready** scores in **PageSpeed Insights** reports.
-- ✅ Integration with **Tailwind CSS** supporting **Dark mode** and **_RTL_**.
+- ✅ Integration with **UnoCSS** supporting **Dark mode** and **_RTL_**.
 - ✅ **Fast and SEO friendly blog** with automatic **RSS feed**, **MDX** support, **Categories & Tags**, **Social Share**, ...
 - ✅ **Image Optimization** (using new **Astro Assets** and **Unpic** for Universal image CDN).
 - ✅ Generation of **project sitemap** based on your routes.
@@ -17,15 +12,14 @@
 
 <br>
 
-<img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/screenshot-astro3.png" alt="AstroWind Theme Screenshot">
+<img src="screenshot.png" alt="AstroUno Theme Screenshot">
 
-[![onWidget](https://custom-icon-badges.demolab.com/badge/made%20by%20-onWidget-556bf2?style=flat-square&logo=onwidget&logoColor=white&labelColor=101827)](https://onwidget.com)
-[![License](https://img.shields.io/github/license/onwidget/astrowind?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/onwidget/astrowind/blob/main/LICENSE.md)
-[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/onwidget)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/onwidget/astrowind#contributing)
-[![Known Vulnerabilities](https://snyk.io/test/github/onwidget/astrowind/badge.svg?style=flat-square)](https://snyk.io/test/github/onwidget/astrowind)
-[![Stars](https://img.shields.io/github/stars/onwidget/astrowind.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
-[![Forks](https://img.shields.io/github/forks/onwidget/astrowind.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/onwidget/astrowind)
+[![License](https://img.shields.io/github/license/jceb/astrouno?style=flat-square&color=dddddd&labelColor=000000)](https://github.com/jceb/astrouno/blob/main/LICENSE.md)
+[![Maintained](https://img.shields.io/badge/maintained%3F-yes-brightgreen.svg?style=flat-square)](https://github.com/jceb)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/jceb/astrouno#contributing)
+[![Known Vulnerabilities](https://snyk.io/test/github/jceb/astrouno/badge.svg?style=flat-square)](https://snyk.io/test/github/jceb/astrouno)
+[![Stars](https://img.shields.io/github/stars/jceb/astrouno.svg?style=social&label=stars&maxAge=86400&color=ff69b4)](https://github.com/jceb/astrouno)
+[![Forks](https://img.shields.io/github/forks/jceb/astrouno.svg?style=social&label=forks&maxAge=86400&color=ff69b4)](https://github.com/jceb/astrouno)
 
 <br>
 
@@ -50,19 +44,19 @@
 
 ## Demo
 
-📌 [https://astrowind.vercel.app/](https://astrowind.vercel.app/)
+📌 [https://astrouno.vercel.app/](https://astrouno.vercel.app/)
 
 <br>
 
 ## Getting started
 
-**AstroWind** tries to give you quick access to creating a website using [Astro 3.0](https://astro.build/) + [Tailwind CSS](https://tailwindcss.com/). It's a free theme which focuses on simplicity, good practices and high performance.
+**AstroUno** tries to give you quick access to creating a website using [Astro 3.0](https://astro.build/) + [UnoCSS](https://unocss.dev/). It's a free theme which focuses on simplicity, good practices and high performance.
 
 Very little vanilla javascript is used only to provide basic functionality so that each developer decides which framework (React, Vue, Svelte, Solid JS...) to use and how to approach their goals..
 
 ### Project structure
 
-Inside AstroWind template, you'll see the following folders and files:
+Inside AstroUno template, you'll see the following folders and files:
 
 ```
 /
@@ -74,7 +68,7 @@ Inside AstroWind template, you'll see the following folders and files:
 │   │   ├── favicons/
 │   │   ├── images/
 │   │   └── styles/
-│   │       └── tailwind.css
+│   │       └── uno.css
 │   ├── components/
 │   │   ├── blog/
 │   │   ├── common/
@@ -90,7 +84,12 @@ Inside AstroWind template, you'll see the following folders and files:
 │   │   │   ├── post-slug-1.md
 │   │   │   ├── post-slug-2.mdx
 │   │   │   └── ...
-│   │   └-- config.ts
+│   │   └── config.ts
+│   ├── i18n/
+│   │   └── ui.ts
+│   ├── icons/
+│   │   ├── your-icon.svg
+│   │   └── ...
 │   ├── layouts/
 │   │   ├── Layout.astro
 │   │   ├── MarkdownLayout.astro
@@ -120,7 +119,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 Any static assets, like images, can be placed in the `public/` directory if they do not require any transformation or in the `assets/` directory if they are imported directly.
 
 
-[![Edit AstroWind on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/onwidget/astrowind/tree/main)  [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/onwidget/astrowind)  [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/onwidget/astrowind)   
+[![Edit AstroUno on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://githubbox.com/jceb/astrouno/tree/main)  [![Open in Gitpod](https://svgshare.com/i/xdi.svg)](https://gitpod.io/?on=gitpod#https://github.com/jceb/astrouno)  [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/jceb/astrouno)   
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file `README.md`. Update `src/config.yaml` and contents. Have fun!
 
@@ -148,8 +147,8 @@ Basic configuration file: `./src/config.yaml`
 
 ```yaml
 site:
-  name: 'Example'
-  site: 'https://example.com'
+  name: AstroUno
+  site: 'https://astrouno.vercel.app'
   base: '/' # Change this if you need to deploy to Github Pages, for example
   trailingSlash: false # Generate permalinks with or without "/" at the end
 
@@ -158,27 +157,29 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 'Example'
-    template: '%s — Example'
-  description: 'This is the default meta description of Example website'
+    default: AstroUno
+    template: '%s — AstroUno'
+  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: 'Example'
+    site_name: AstroUno
     images:
-      - url: '~/assets/images/default.jpg'
+      - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@twitter_user'
-    site: '@twitter_user'
+    handle: '@jceb'
+    site: '@jceb'
     cardType: summary_large_image
 
 i18n:
+  # Configure languages and translations in ./i18n/ui.ts
   language: en
   textDirection: ltr
+  showDefaultLanguageInURL: false
 
 apps:
   blog:
@@ -187,7 +188,7 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/blog/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
@@ -215,7 +216,51 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
+  showAnnouncement: true
+  header:
+    isSticky: true
+    showLanguagePicker: true
+    showToggleTheme: false
+    showRssFeed: true
+
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+  tokens:
+    default:
+      fonts:
+        sans: InterVariable
+        serif: var(--ph-font-sans)
+        heading: var(--ph-font-sans)
+      colors:
+        default: rgb(16 16 16)
+        heading: rgb(0 0 0)
+        muted: rgb(40 40 40)
+        bgPage: rgb(255 255 255)
+        primary: rgb(0 124 220)
+        secondary: rgb(30 58 138)
+        accent: rgb(109 40 217)
+        info: rgb(119 182 234)
+        success: rgb(54 211 153)
+        warning: rgb(251 189 35)
+        error: rgb(248 114 114)
+        link: var(--ph-color-primary)
+        linkActive: var(--ph-color-link)
+    dark:
+      fonts: {}
+      colors:
+        default: rgb(247, 248, 248)
+        heading: rgb(247, 248, 248)
+        muted: rgb(200, 188, 208)
+        bgPage: rgb(3 6 32)
+        primary: rgb(29 78 216)
+        secondary: rgb(30 58 138)
+        accent: rgb(135 77 2267)
+        info: rgb(58 191 248)
+        success: rgb(54 211 153)
+        warning: rgb(251 189 35)
+        error: rgb(248 114 114)
+        link: var(--ph-color-primary)
+        linkActive: var(--ph-color-link)
 ```
 
 <br>
@@ -238,28 +283,19 @@ prefer.
 
 Clone this repository on own GitHub account and deploy to Netlify:
 
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/onwidget/astrowind)
+[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jceb/astrouno)
 
 #### Deploy to Vercel
 
 Clone this repository on own GitHub account and deploy to Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonwidget%2Fastrowind)
-
-<br>
-
-## Frequently Asked Questions
-
-- Why?
--
--
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjceb%2Fastrouno)
 
 <br>
 
 ## Related projects
 
-- [TailNext](https://tailnext.vercel.app/) - Free template using Next.js 13 and Tailwind CSS with the new App Router.
-- [Qwind](https://qwind.pages.dev/) - Free template to make your website using Qwik + Tailwind CSS.
+- [astrowind](https://github.com/onwidget/astrowind) - Astro + Tailwind CSS.
 
 ## Contributing
 
@@ -268,8 +304,8 @@ That would be very useful for all of us and we would be happy to listen and take
 
 ## Acknowledgements
 
-Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/onwidget/astrowind/graphs/contributors).
+Initially created by [onWidget](https://onwidget.com) and maintained by a community of [contributors](https://github.com/jceb/astrouno/graphs/contributors).
 
 ## License
 
-**AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
+**AstroUno** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.

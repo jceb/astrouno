@@ -1,22 +1,22 @@
 site:
-  name: AstroWind
+  name: AstroUno
   site: 'https://astrowind.vercel.app'
-  base: '/'
-  trailingSlash: false
+  base: '/' # Change this if you need to deploy to Github Pages, for example
+  trailingSlash: false # Generate permalinks with or without "/" at the end
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: false # Or some value,
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: AstroUno
+    template: '%s — AstroUno'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: AstroUno
     images:
       - url: '~/assets/images/default.png'
         width: 1200
