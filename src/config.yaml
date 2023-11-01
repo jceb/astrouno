@@ -16,7 +16,17 @@ metadata:
     index: true
     follow: true
   openGraph:
+    # Supported metadata: https://www.npmjs.com/package/@astrolib/seo
+    # Tool 1: https://www.opengraph.xyz/
+    # Tool 2: https://opengraphtools.com/
     site_name: AstroUno
+    article:
+      authors:
+        - astrouno
+      tags:
+        - astro
+        - unocss
+        - landing
     images:
       - url: '~/assets/images/default.png'
         width: 1200
