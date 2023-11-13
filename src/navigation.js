@@ -123,6 +123,7 @@ export const getNavigationData = (url) => {
       ],
       actions: [
         {
+          variant: 'primary',
           text: t('nav.download'),
           href: 'https://github.com/jceb/astrouno',
           target: '_blank',
