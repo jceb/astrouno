@@ -10,6 +10,7 @@ import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
 import icon from 'astro-icon';
 import tasks from './src/utils/tasks';
+import yaml from '@rollup/plugin-yaml';
 
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
@@ -82,6 +83,9 @@ export default defineConfig({
   },
 
   vite: {
+    plugins: [
+      yaml(),
+    ],
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
