@@ -67,9 +67,9 @@ export default defineConfig({
     compress({
       CSS: true,
       HTML: {
-        "html-minifier-terser": {
+        'html-minifier-terser': {
           removeAttributeQuotes: false,
-        }
+        },
       },
       Image: false,
       JavaScript: true,
@@ -83,9 +83,7 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [
-      yaml(),
-    ],
+    plugins: [yaml()],
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
