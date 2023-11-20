@@ -131,6 +131,7 @@ export interface Item {
   title?: string;
   description?: string;
   icon?: string;
+  iconRef?: Record<string, string>;
   classes?: Record<string, string>;
   callToAction?: CallToAction;
   image?: Image;
