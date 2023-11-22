@@ -19,6 +19,7 @@ export interface MetaDataConfig extends Omit<MetaData, 'title'> {
 export interface I18NConfig {
   language: string;
   textDirection: string;
+  showDefaultLanguageInURL: boolean;
   dateFormatter?: Intl.DateTimeFormat;
 }
 export interface AppBlogConfig {

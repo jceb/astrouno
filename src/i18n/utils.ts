@@ -3,7 +3,7 @@
 import { I18N } from '~/utils/config';
 import { languages, textDirections, ui } from './ui';
 
-export function getLangFromUrl(url: URL): string {
+export function getLangFromUrl(url: URL): object {
   const [, lang] = url.pathname.split('/');
   if (lang in languages) return { language: lang as keyof typeof ui };
   return {
@@ -18,7 +18,7 @@ export function useTranslations(lang: keyof typeof ui) {
   };
 }
 
-export function translatePath(path: string, l: string = lang) {
+export function translatePath(path: string, l: string) {
   return !I18N.showDefaultLanguageInURL && l === I18N.language ? path : `/${l}${path}`;
 }
 
