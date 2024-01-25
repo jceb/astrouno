@@ -3,11 +3,10 @@
 import { I18N } from '~/utils/config';
 import { languages, textDirections, ui } from './ui';
 
-export function getLangFromUrl(url: URL): object {
-  const [, lang] = url.pathname.split('/');
-  if (lang in languages) return { language: lang as keyof typeof ui };
+export function getLangFromUrl(url: URL): : { language: string; textDirection: string }  {
+  const [, lang] = url.pathname.split("/");
   return {
-    language: I18N.language,
+    language: lang in languages ? (lang as keyof typeof ui) : I18N.language,
     textDirection: textDirections[lang] || I18N.textDirection,
   };
 }
